@@ -31,7 +31,7 @@ I used QuickDB to design the schema for the six provided CSV data files, outlini
 
 ## Data Analysis
 
-1. List the employee number, last name, first name, sex, and salary of each employee.
+**1 - List the employee number, last name, first name, sex, and salary of each employee.**
 
 ```sql
 SELECT 
@@ -47,7 +47,7 @@ LEFT JOIN salaries AS sal ON emp.emp_no = sal.emp_no
 
 
 
-2. List the first name, last name, and hire date for the employees who were hired in 1986.
+**2 - List the first name, last name, and hire date for the employees who were hired in 1986.**
 
 ```sql
 SELECT 
@@ -61,7 +61,7 @@ WHERE
 ```
 
 
-3. List the manager of each department along with their department number, department name, employee number, last name, and first name.
+**3 - List the manager of each department along with their department number, department name, employee number, last name, and first name.**
 
 ```sql
 SELECT 
@@ -81,7 +81,7 @@ LEFT JOIN employees as emp
 ```
 
 
-4. List the department number for each employee along with that employee’s employee number, last name, first name, and department name.
+**4 - List the department number for each employee along with that employee’s employee number, last name, first name, and department name.**
 
 ```sql
 SELECT 
@@ -101,7 +101,7 @@ LEFT JOIN departments AS dept
 ```
 
 
-5. List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B.
+**5 - List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B.**
 
 ```sql
 SELECT
@@ -115,7 +115,7 @@ WHERE first_name = 'Hercules'
 ```
 
 
-6. List each employee in the Sales department, including their employee number, last name, and first name.
+**6 - List each employee in the Sales department, including their employee number, last name, and first name.**
 
 ```sql
 SELECT 
@@ -136,7 +136,7 @@ LEFT JOIN departments as dept
 ```
 
 
-7. List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
+**7 - List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.**
 
 ```sql
 SELECT 
@@ -158,7 +158,7 @@ LEFT JOIN departments as dept
 ```
 
 
-8. List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
+**8 - List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).**
 
 ```sql
 SELECT last_name, COUNT(last_name) as total_last_name
