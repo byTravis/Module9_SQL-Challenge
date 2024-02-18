@@ -24,22 +24,21 @@ I used QuickDB to design the schema for the six provided CSV data files, outlini
 6. dept_manager
 
 
-## Data Analysis
+'## Data Analysis
 
 1. List the employee number, last name, first name, sex, and salary of each employee.
 
-`
+```sql
 SELECT emp.emp_no,
-	emp.last_name, 
-	emp.first_name,
-	emp.sex,
-	sal.salary
+    emp.last_name,
+    emp.first_name,
+    emp.sex,
+    sal.salary
+FROM employees AS emp
+LEFT JOIN salaries AS sal ON emp.emp_no = sal.emp_no;
+```
 
-FROM employees as emp
-LEFT JOIN salaries as sal
-	ON emp.emp_no = sal.emp_no
-;
-`
+
 
 2. List the first name, last name, and hire date for the employees who were hired in 1986.
 
@@ -55,17 +54,22 @@ LEFT JOIN salaries as sal
 
 `code`
 
+
 5. List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B.
 
 `code`
+
 
 6. List each employee in the Sales department, including their employee number, last name, and first name.
 
 `code`
 
+
 7. List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
 `code`
 
+
 8. List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
 
+`code`
