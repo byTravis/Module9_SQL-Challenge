@@ -2,7 +2,7 @@
 
 SQL Challenge - Week 9 - Data Analytics Boot Camp - University of Oregon
 
-![Module 9 - SQL Challenge](images\header_graphic.png)
+![Module 9 - SQL Challenge](images/header_graphic.png)
 
 
 ## Background
