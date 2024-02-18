@@ -1,5 +1,9 @@
-# Module9_SQL-Challenge
+# Module 9 - SQL Challenge
+
 SQL Challenge - Week 9 - Data Analytics Boot Camp - University of Oregon
+
+![Module 9 - SQL Challenge](images\header_graphic.png)
+
 
 ## Background
 It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company). Your first major task is to do a research project about people whom the company employed during the 1980s and 1990s. All that remains of the employee database from that period are six CSV files.
@@ -8,7 +12,7 @@ For this project, I designed the tables to hold the data from the CSV files, imp
 
 
 ## Data Modeling
-I used QuickDBD to create an ERD diagram for all 6 data files.   [Source diagram](https://app.quickdatabasediagrams.com/#/d/OgcunW)
+I used QuickDBD to create an ERD diagram for all 6 data files.  [Source diagram located here.](https://app.quickdatabasediagrams.com/#/d/OgcunW)
 
 
 ![ERD Diagram](ERD_diagram.png)
@@ -30,13 +34,15 @@ I used QuickDB to design the schema for the six provided CSV data files, outlini
 1. List the employee number, last name, first name, sex, and salary of each employee.
 
 ```sql
-SELECT emp.emp_no,
+SELECT 
+    emp.emp_no,
     emp.last_name,
     emp.first_name,
     emp.sex,
     sal.salary
 FROM employees AS emp
-LEFT JOIN salaries AS sal ON emp.emp_no = sal.emp_no;
+LEFT JOIN salaries AS sal ON emp.emp_no = sal.emp_no
+;
 ```
 
 
@@ -44,7 +50,8 @@ LEFT JOIN salaries AS sal ON emp.emp_no = sal.emp_no;
 2. List the first name, last name, and hire date for the employees who were hired in 1986.
 
 ```sql
-SELECT first_name,
+SELECT 
+    first_name,
 	last_name,
 	hire_date	
 FROM employees
